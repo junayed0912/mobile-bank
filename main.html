@@ -1,11 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payoo</title>
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- outfit font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .outfit {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
 </head>
-<body>
-    Hello
+
+<body class="bg-slate-800 outfit">
+    <section class="max-w-md min-h-screen mx-auto bg-[#f4f5f7]">
+        <header class="bg-white  p-6 rounded-3xl">
+            <nav class="flex justify-between border-b border-b-slate-300 pb-3">
+                <div class="flex justify-center items-center">
+                    <img src="assets/Group.png" alt="" class="w-[10vw]">
+                    <div>
+                        <h1 class=" font-bold text-lg">$45000</h1>
+                        <p class="text-gray-500 text-sm">Available Balance</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn text-gray-500 text-sm"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log
+                        Out</button>
+                </div>
+            </nav>
+
+            <!-- introduction-->
+            <div class="mt-8">
+                <h1 class="font-bold text-2xl"><i class="fas fa-fire text-orange-500"></i> Welcome to Payooo!</h1>
+                <p class="text-gray-500 mt-3">Enjoy easy and convenient financial services with us. Cashout charge is
+                    low and </p>
+            </div>
+
+            <!-- options -->
+
+            <div class="grid grid-cols-3 mt-6 gap-4">
+                <!-- Card 1 -->
+                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                    <img src="assets/wallet1.png" alt="" class="h-[20px] w-auto mb-2" />
+                    <h2 class="font-semibold text-sm text-center">Add Money</h2>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                    <img src="assets/send1.png" alt="" class="h-[20px] w-auto mb-2" />
+                    <h2 class="font-semibold text-sm text-center">Cashout</h2>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                    <img src="assets/money1.png" alt="" class="h-[20px] w-auto mb-2" />
+                    <h2 class="font-semibold text-sm text-center">Transfer Money</h2>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                    <img src="assets/bonus1.png" alt="" class="h-[20px] w-auto mb-2" />
+                    <h2 class="font-semibold text-sm text-center">Get Bonus</h2>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                    <img src="assets/purse1.png" alt="" class="h-[20px] w-auto mb-2" />
+                    <h2 class="font-semibold text-sm text-center">Pay Bill</h2>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                    <img src="assets/transaction1.png" alt="" class="h-[20px] w-auto mb-2" />
+                    <h2 class="font-semibold text-sm text-center">Transactions</h2>
+                </div>
+            </div>
+
+        </header>
+
+        <main class="mt-8 px-6">
+            <!-- add money-->
+            <div>
+                <h1 class="text-lg font-semibold mb-4 ml-2">Add Money</h1>
+
+                <div class="hero">
+
+                    <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
+                        <form class="card-body">
+                            <legend>
+                                <select class="select appearance-none text-gray-500 border-none rounded-3xl bg-gray-200 font-light mt-3">
+                                    <option disabled selected>Select Bank</option>
+                                    <option>Bkash</option>
+                                    <option>Rocket</option>
+                                    <option>Nagad</option>
+                                </select>
+                            </legend>
+                            <fieldset class="fieldset">
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Bank Account
+                                    Number</label>
+                                <input id="acc-number" type="number"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 11 digit account number" required />
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Amount to Add</label>
+                                <input id="amount" type="text"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Add Amount to withdraw" required />
+                                <label class="label font-medium text-black text-base mb-1 mt-3">4 Digit Pin</label>
+                                <input id="pin" type="password"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 4 Digit Pin" required />
+                                <button id="login-btn"
+                                    class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Add Money</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
 </body>
+
 </html>
