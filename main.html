@@ -95,6 +95,8 @@
                 <img class="rounded-xl" src="assets/idaBpHHByv.jpeg" alt="">
                 <img class="rounded-xl" src="assets/gCXpaPy22eVphoM3xoMAtY3YieyxduBZrT5GgTnV.jpg" alt="">
              </div>
+
+             
             <!-- add money-->
             <div id="add-money-section">
                 <h1 class="text-lg font-semibold mb-4 ml-2">Add Money</h1>
@@ -134,7 +136,7 @@
             </div>
             
             <!-- cashout -->
-             <div id="add-money-section">
+             <div id="cashout-section">
                 <h1 class="text-lg font-semibold mb-4 ml-2">Cash Out</h1>
                 <div class="hero">
                     <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
@@ -146,15 +148,62 @@
                                     placeholder="Enter 11 digit number" required />
 
                                 <label class="label font-medium text-black text-base mb-1 mt-3">Amount</label>
-                                <input id="amount" type="text"
+                                <input id="amount-to-cashout" type="text"
                                     class="input border-none rounded-3xl bg-gray-200 font-light"
                                     placeholder="Enter Amount to withdraw" required />
                                 <label class="label font-medium text-black text-base mb-1 mt-3">Pin Number</label>
-                                <input id="pin" type="password"
+                                <input id="pin-withdraw" type="password"
                                     class="input border-none rounded-3xl bg-gray-200 font-light"
                                     placeholder="Enter 4 Digit Pin number" value="1234" required />
-                                <button id="add-money-btn"
+                                <button id="withdraw"
                                     class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Withdraw Money</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- transfer money-->
+             <div id="transfer-money-section">
+                <h1 class="text-lg font-semibold mb-4 ml-2">Cash Out</h1>
+                <div class="hero">
+                    <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label font-medium text-black text-base mb-1 mt-3">User Account Number</label>
+                                <input id="user-acc-number" type="number" value="01249405050"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 11 digit number" required />
+
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Amount</label>
+                                <input id="amount-to-transfer" type="text"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter Amount to transfer" required />
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Pin Number</label>
+                                <input id="pin-transfer" type="password"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 4 Digit Pin number" value="1234" required />
+                                <button id="transfer"
+                                    class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Send Now</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- get bonush -->
+               <div id="bonus-section">
+                <h1 class="text-lg font-semibold mb-4 ml-2">Get Bonus</h1>
+                <div class="hero">
+                    <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Enter Bonus Coupon</label>
+                                <input id="bonus-cuopon" type="text"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter your coupon" required />
+                                <button id="bonus"
+                                    class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Send Now</button>
                             </fieldset>
                         </form>
                     </div>
@@ -164,6 +213,7 @@
     </section>
     <script src="script/add-money.js"></script>
     <script src="script/toggle.js"></script>
+    <script src="script/cashout.js"></script>
 </body>
 
 </html>
