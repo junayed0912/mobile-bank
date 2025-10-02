@@ -29,12 +29,12 @@
                 <div class="flex justify-center items-center">
                     <img src="assets/Group.png" alt="" class="w-[10vw]">
                     <div>
-                        <h1 class=" font-bold text-lg">$45000</h1>
+                        <h1 class=" font-bold text-lg">$<span id="original-amount">45000</span></h1>
                         <p class="text-gray-500 text-sm">Available Balance</p>
                     </div>
                 </div>
                 <div>
-                    <button class="btn text-gray-500 text-sm"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log
+                    <button id="log-out-btn" class="btn text-gray-500 text-sm"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log
                         Out</button>
                 </div>
             </nav>
@@ -50,37 +50,37 @@
 
             <div class="grid grid-cols-3 mt-6 gap-4">
                 <!-- Card 1 -->
-                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                <div id="add-money-box" class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
                     <img src="assets/wallet1.png" alt="" class="h-[20px] w-auto mb-2" />
                     <h2 class="font-semibold text-sm text-center">Add Money</h2>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                <div id="cashout-box" class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
                     <img src="assets/send1.png" alt="" class="h-[20px] w-auto mb-2" />
                     <h2 class="font-semibold text-sm text-center">Cashout</h2>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                <div id="transfer-money-box" class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
                     <img src="assets/money1.png" alt="" class="h-[20px] w-auto mb-2" />
                     <h2 class="font-semibold text-sm text-center">Transfer Money</h2>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                <div id="get-bonus-box" class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
                     <img src="assets/bonus1.png" alt="" class="h-[20px] w-auto mb-2" />
                     <h2 class="font-semibold text-sm text-center">Get Bonus</h2>
                 </div>
 
                 <!-- Card 5 -->
-                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                <div id="pay-bill-box" class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
                     <img src="assets/purse1.png" alt="" class="h-[20px] w-auto mb-2" />
                     <h2 class="font-semibold text-sm text-center">Pay Bill</h2>
                 </div>
 
                 <!-- Card 6 -->
-                <div class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
+                <div id="transactions-box" class="aspect-square rounded-xl border border-slate-200 flex flex-col justify-center items-center">
                     <img src="assets/transaction1.png" alt="" class="h-[20px] w-auto mb-2" />
                     <h2 class="font-semibold text-sm text-center">Transactions</h2>
                 </div>
@@ -89,8 +89,14 @@
         </header>
 
         <main class="mt-8 px-6">
+            <!-- image section -->
+             <div id="image-section" class="flex flex-col gap-4">
+                <img class="rounded-xl" src="assets/mobile-Banking-Billboard.jpg" alt="">
+                <img class="rounded-xl" src="assets/idaBpHHByv.jpeg" alt="">
+                <img class="rounded-xl" src="assets/gCXpaPy22eVphoM3xoMAtY3YieyxduBZrT5GgTnV.jpg" alt="">
+             </div>
             <!-- add money-->
-            <div>
+            <div class="add-money-section">
                 <h1 class="text-lg font-semibold mb-4 ml-2">Add Money</h1>
 
                 <div class="hero">
@@ -100,15 +106,15 @@
                             <legend>
                                 <select class="select appearance-none text-gray-500 border-none rounded-3xl bg-gray-200 font-light mt-3">
                                     <option disabled selected>Select Bank</option>
-                                    <option>Bkash</option>
-                                    <option>Rocket</option>
-                                    <option>Nagad</option>
+                                    <option class="text-black">Bkash</option>
+                                    <option class="text-black">Rocket</option>
+                                    <option class="text-black">Nagad</option>
                                 </select>
                             </legend>
                             <fieldset class="fieldset">
                                 <label class="label font-medium text-black text-base mb-1 mt-3">Bank Account
                                     Number</label>
-                                <input id="acc-number" type="number"
+                                <input id="acc-number" type="number" value="01249405050"
                                     class="input border-none rounded-3xl bg-gray-200 font-light"
                                     placeholder="Enter 11 digit account number" required />
                                 <label class="label font-medium text-black text-base mb-1 mt-3">Amount to Add</label>
@@ -118,8 +124,8 @@
                                 <label class="label font-medium text-black text-base mb-1 mt-3">4 Digit Pin</label>
                                 <input id="pin" type="password"
                                     class="input border-none rounded-3xl bg-gray-200 font-light"
-                                    placeholder="Enter 4 Digit Pin" required />
-                                <button id="login-btn"
+                                    placeholder="Enter 4 Digit Pin" value="1234" required />
+                                <button id="add-money-btn"
                                     class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Add Money</button>
                             </fieldset>
                         </form>
@@ -128,6 +134,7 @@
             </div>
         </main>
     </section>
+    <script src="script/add-money.js"></script>
 </body>
 
 </html>
