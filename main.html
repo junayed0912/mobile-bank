@@ -96,7 +96,7 @@
         </header>
 
         <main class="mt-8 px-6">
-            <!-- latesy section -->
+            <!-- latest section -->
             <div id="latest-payment-section" class="flex flex-col gap-3">
                 <div class="flex justify-between items-center">
                     <h1 class="text-lg font-semibold">Latest Payment</h1>
@@ -246,7 +246,7 @@
 
             <!-- transfer money-->
             <div id="transfer-money-section">
-                <h1 class="text-lg font-semibold mb-4 ml-2">Cash Out</h1>
+                <h1 class="text-lg font-semibold mb-4 ml-2">Transfer Money</h1>
                 <div class="hero">
                     <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
                         <form class="card-body">
@@ -295,6 +295,47 @@
                 </div>
             </div>
 
+            <!-- pay bill section -->
+            <div id="pay-bill-section">
+                <h1 class="text-lg font-semibold mb-4 ml-2">Pay Bill</h1>
+
+                <div class="hero">
+
+                    <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
+                        <form class="card-body">
+                            <legend>
+                                <label class="label font-medium text-black text-base mb-1">Select To Pay</label>
+                                <select
+                                    class="select appearance-none text-gray-500 border-none rounded-3xl bg-gray-200 font-light mt-3">
+                                    <option disabled selected>Select Bank</option>
+                                    <option class="text-black">Bkash</option>
+                                    <option class="text-black">Rocket</option>
+                                    <option class="text-black">Nagad</option>
+                                </select>
+                            </legend>
+                            <fieldset class="fieldset">
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Biller Account
+                                    Number</label>
+                                <input id="biller-number" type="number" value="01249405050"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter account number" required />
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Add Amount to pay</label>
+                                <input id="pay-amount" type="text"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Add Amount to pay" required />
+                                <label class="label font-medium text-black text-base mb-1 mt-3">4 Digit Pin</label>
+                                <input id="pay-pin" type="password"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 4 Digit Pin" value="1234" required />
+                                <button id="pay-bill-btn"
+                                    class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Add
+                                    Money</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
             <!-- transactions -->
             <div id="transaction-section" class="flex flex-col gap-3">
                 <div class="flex justify-between items-center">
@@ -302,7 +343,7 @@
                     <p class="text-gray-500">View All</p>
                 </div>
                 <div id="receipt" class="flex flex-col items-center justify-center mt-10 text-gray-500">
-                    <i  class="fa-solid fa-receipt text-9xl"></i>
+                    <i class="fa-solid fa-receipt text-9xl"></i>
                     <p class="text-xl mt-2">No transaction history</p>
                 </div>
             </div>
