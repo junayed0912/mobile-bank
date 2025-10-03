@@ -8,15 +8,17 @@ document.getElementById('withdraw').addEventListener('click', function (event) {
 
     if (mobileNumber.length === 11 && mobileNumber.startsWith('01')) {
         if (Pin === 1234) {
-            const subtract = mainAmount - cashedOut;
-            originalAmount.innerText = subtract;
+            if (mainAmount !== 0 && cashedOut <= mainAmount) {
+                const subtract = mainAmount - cashedOut;
+                originalAmount.innerText = subtract;
 
-            // transction adding
-            const transactionSection = document.getElementById('transaction-section');
+                document.getElementById('receipt').style.display = 'none';
+                // transction adding
+                const transactionSection = document.getElementById('transaction-section');
 
-            const newCard = document.createElement('div');
-            newCard.className = 'shadow-md bg-white p-4 rounded-2xl';
-            newCard.innerHTML = `
+                const newCard = document.createElement('div');
+                newCard.className = 'shadow-md bg-white p-4 rounded-2xl';
+                newCard.innerHTML = `
                     <div class="flex justify-between items-center">
                         <div class="flex gap-4 items-center">
                             <div class="rounded-full bg-gray-200 w-11 h-11 flex items-center justify-center">
@@ -31,7 +33,13 @@ document.getElementById('withdraw').addEventListener('click', function (event) {
                             -${cashedOut}
                         </div>
                     </div>`;
-        transactionSection.appendChild(newCard);
+                transactionSection.appendChild(newCard);
+            }
+            else {
+                alert('Not enough balance');
+            }
+
+
         }
         else {
             alert("Pin is not correct");

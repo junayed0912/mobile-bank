@@ -17,6 +17,7 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
             const sum = mainAmount + addedAmount;
             originalAmount.innerText = sum;
 
+            document.getElementById('receipt').style.display = 'none';
             // transction adding
             const transactionSection = document.getElementById('transaction-section');
 
