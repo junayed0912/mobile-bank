@@ -2,14 +2,36 @@ document.getElementById('withdraw').addEventListener('click', function (event) {
     event.preventDefault()
     const mobileNumber = document.getElementById('agent-number').value;
     const Pin = parseFloat(document.getElementById('pin-withdraw').value)
-    const addedAmount = parseFloat(document.getElementById('amount-to-cashout').value);
+    const cashedOut = parseFloat(document.getElementById('amount-to-cashout').value);
     const originalAmount = document.getElementById('original-amount');
     const mainAmount = parseFloat(originalAmount.innerText);
 
     if (mobileNumber.length === 11 && mobileNumber.startsWith('01')) {
         if (Pin === 1234) {
-            const subtract = mainAmount - addedAmount;
+            const subtract = mainAmount - cashedOut;
             originalAmount.innerText = subtract;
+
+            // transction adding
+            const transactionSection = document.getElementById('transaction-section');
+
+            const newCard = document.createElement('div');
+            newCard.className = 'shadow-md bg-white p-4 rounded-2xl';
+            newCard.innerHTML = `
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4 items-center">
+                            <div class="rounded-full bg-gray-200 w-11 h-11 flex items-center justify-center">
+                                <img src="assets/wallet1.png" alt="">
+                            </div>
+                            <div>
+                                <h2 class="font-semibold text-gray-600">Cash Out</h2>
+                                <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+                            </div>
+                        </div>
+                        <div class="text-red-600 font-semibold">
+                            -${cashedOut}
+                        </div>
+                    </div>`;
+        transactionSection.appendChild(newCard);
         }
         else {
             alert("Pin is not correct");
