@@ -10,6 +10,34 @@ document.getElementById('transfer').addEventListener('click', function (event) {
         if (Pin === 1234) {
             const subtract = mainAmount - transferedAmount;
             originalAmount.innerText = subtract;
+
+              if (mainAmount !== 0 && transferedAmount <= mainAmount) {
+                const subtract = mainAmount - transferedAmount;
+                originalAmount.innerText = subtract;
+
+                document.getElementById('receipt').style.display = 'none';
+                // transction adding
+                const transactionSection = document.getElementById('transaction-section');
+
+                const newCard = document.createElement('div');
+                newCard.className = 'shadow-md bg-white p-4 rounded-2xl';
+                newCard.innerHTML = `
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4 items-center">
+                            <div class="rounded-full bg-gray-200 w-11 h-11 flex items-center justify-center">
+                                <img src="assets/wallet1.png" alt="">
+                            </div>
+                            <div>
+                                <h2 class="font-semibold text-gray-600">Cash Out</h2>
+                                <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+                            </div>
+                        </div>
+                        <div class="text-red-600 font-semibold">
+                            -${transferedAmount}
+                        </div>
+                    </div>`;
+                transactionSection.appendChild(newCard);
+            }
         }
         else {
             alert("Pin is not correct");
