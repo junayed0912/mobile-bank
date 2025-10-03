@@ -96,7 +96,7 @@
         </header>
 
         <main class="mt-8 px-6">
-            <!-- image section -->
+            <!-- latesy section -->
             <div id="latest-payment-section" class="flex flex-col gap-3">
                 <div class="flex justify-between items-center">
                     <h1 class="text-lg font-semibold">Latest Payment</h1>
@@ -156,7 +156,7 @@
 
                 </div>
                 <!-- fouth -->
-                 <div class="shadow-md bg-white p-4 rounded-2xl">
+                <div class="shadow-md bg-white p-4 rounded-2xl">
                     <div class="flex justify-between items-center">
                         <div class="flex gap-4 items-center">
                             <div class="rounded-full bg-gray-200 w-11 h-11 flex items-center justify-center">
@@ -174,126 +174,134 @@
                 </div>
             </div>
 
-                <!-- add money-->
-                <div id="add-money-section">
-                    <h1 class="text-lg font-semibold mb-4 ml-2">Add Money</h1>
+            <!-- add money-->
+            <div id="add-money-section">
+                <h1 class="text-lg font-semibold mb-4 ml-2">Add Money</h1>
 
-                    <div class="hero">
+                <div class="hero">
 
-                        <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
-                            <form class="card-body">
-                                <legend>
-                                    <select
-                                        class="select appearance-none text-gray-500 border-none rounded-3xl bg-gray-200 font-light mt-3">
-                                        <option disabled selected>Select Bank</option>
-                                        <option class="text-black">Bkash</option>
-                                        <option class="text-black">Rocket</option>
-                                        <option class="text-black">Nagad</option>
-                                    </select>
-                                </legend>
-                                <fieldset class="fieldset">
-                                    <label class="label font-medium text-black text-base mb-1 mt-3">Bank Account
-                                        Number</label>
-                                    <input id="acc-number" type="number" value="01249405050"
-                                        class="input border-none rounded-3xl bg-gray-200 font-light"
-                                        placeholder="Enter 11 digit account number" required />
-                                    <label class="label font-medium text-black text-base mb-1 mt-3">Amount to
-                                        Add</label>
-                                    <input id="amount" type="text"
-                                        class="input border-none rounded-3xl bg-gray-200 font-light"
-                                        placeholder="Add Amount to withdraw" required />
-                                    <label class="label font-medium text-black text-base mb-1 mt-3">4 Digit Pin</label>
-                                    <input id="pin" type="password"
-                                        class="input border-none rounded-3xl bg-gray-200 font-light"
-                                        placeholder="Enter 4 Digit Pin" value="1234" required />
-                                    <button id="add-money-btn"
-                                        class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Add
-                                        Money</button>
-                                </fieldset>
-                            </form>
-                        </div>
+                    <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
+                        <form class="card-body">
+                            <legend>
+                                <select
+                                    class="select appearance-none text-gray-500 border-none rounded-3xl bg-gray-200 font-light mt-3">
+                                    <option disabled selected>Select Bank</option>
+                                    <option class="text-black">Bkash</option>
+                                    <option class="text-black">Rocket</option>
+                                    <option class="text-black">Nagad</option>
+                                </select>
+                            </legend>
+                            <fieldset class="fieldset">
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Bank Account
+                                    Number</label>
+                                <input id="acc-number" type="number" value="01249405050"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 11 digit account number" required />
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Amount to
+                                    Add</label>
+                                <input id="amount" type="text"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Add Amount to withdraw" required />
+                                <label class="label font-medium text-black text-base mb-1 mt-3">4 Digit Pin</label>
+                                <input id="pin" type="password"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 4 Digit Pin" value="1234" required />
+                                <button id="add-money-btn"
+                                    class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Add
+                                    Money</button>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
+            </div>
 
-                <!-- cashout -->
-                <div id="cashout-section">
-                    <h1 class="text-lg font-semibold mb-4 ml-2">Cash Out</h1>
-                    <div class="hero">
-                        <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
-                            <form class="card-body">
-                                <fieldset class="fieldset">
-                                    <label class="label font-medium text-black text-base mb-1 mt-3">Agent Number</label>
-                                    <input id="agent-number" type="number" value="01249405050"
-                                        class="input border-none rounded-3xl bg-gray-200 font-light"
-                                        placeholder="Enter 11 digit number" required />
+            <!-- cashout -->
+            <div id="cashout-section">
+                <h1 class="text-lg font-semibold mb-4 ml-2">Cash Out</h1>
+                <div class="hero">
+                    <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Agent Number</label>
+                                <input id="agent-number" type="number" value="01249405050"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 11 digit number" required />
 
-                                    <label class="label font-medium text-black text-base mb-1 mt-3">Amount</label>
-                                    <input id="amount-to-cashout" type="text"
-                                        class="input border-none rounded-3xl bg-gray-200 font-light"
-                                        placeholder="Enter Amount to withdraw" required />
-                                    <label class="label font-medium text-black text-base mb-1 mt-3">Pin Number</label>
-                                    <input id="pin-withdraw" type="password"
-                                        class="input border-none rounded-3xl bg-gray-200 font-light"
-                                        placeholder="Enter 4 Digit Pin number" value="1234" required />
-                                    <button id="withdraw"
-                                        class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Withdraw
-                                        Money</button>
-                                </fieldset>
-                            </form>
-                        </div>
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Amount</label>
+                                <input id="amount-to-cashout" type="text"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter Amount to withdraw" required />
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Pin Number</label>
+                                <input id="pin-withdraw" type="password"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 4 Digit Pin number" value="1234" required />
+                                <button id="withdraw"
+                                    class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Withdraw
+                                    Money</button>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
+            </div>
 
-                <!-- transfer money-->
-                <div id="transfer-money-section">
-                    <h1 class="text-lg font-semibold mb-4 ml-2">Cash Out</h1>
-                    <div class="hero">
-                        <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
-                            <form class="card-body">
-                                <fieldset class="fieldset">
-                                    <label class="label font-medium text-black text-base mb-1 mt-3">User Account
-                                        Number</label>
-                                    <input id="user-acc-number" type="number" value="01249405050"
-                                        class="input border-none rounded-3xl bg-gray-200 font-light"
-                                        placeholder="Enter 11 digit number" required />
+            <!-- transfer money-->
+            <div id="transfer-money-section">
+                <h1 class="text-lg font-semibold mb-4 ml-2">Cash Out</h1>
+                <div class="hero">
+                    <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label font-medium text-black text-base mb-1 mt-3">User Account
+                                    Number</label>
+                                <input id="user-acc-number" type="number" value="01249405050"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 11 digit number" required />
 
-                                    <label class="label font-medium text-black text-base mb-1 mt-3">Amount</label>
-                                    <input id="amount-to-transfer" type="text"
-                                        class="input border-none rounded-3xl bg-gray-200 font-light"
-                                        placeholder="Enter Amount to transfer" required />
-                                    <label class="label font-medium text-black text-base mb-1 mt-3">Pin Number</label>
-                                    <input id="pin-transfer" type="password"
-                                        class="input border-none rounded-3xl bg-gray-200 font-light"
-                                        placeholder="Enter 4 Digit Pin number" value="1234" required />
-                                    <button id="transfer"
-                                        class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Send
-                                        Now</button>
-                                </fieldset>
-                            </form>
-                        </div>
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Amount</label>
+                                <input id="amount-to-transfer" type="text"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter Amount to transfer" required />
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Pin Number</label>
+                                <input id="pin-transfer" type="password"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter 4 Digit Pin number" value="1234" required />
+                                <button id="transfer"
+                                    class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Send
+                                    Now</button>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
+            </div>
 
-                <!-- get bonush -->
-                <div id="bonus-section">
-                    <h1 class="text-lg font-semibold mb-4 ml-2">Get Bonus</h1>
-                    <div class="hero">
-                        <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
-                            <form class="card-body">
-                                <fieldset class="fieldset">
-                                    <label class="label font-medium text-black text-base mb-1 mt-3">Enter Bonus
-                                        Coupon</label>
-                                    <input id="bonus-cuopon" type="text"
-                                        class="input border-none rounded-3xl bg-gray-200 font-light"
-                                        placeholder="Enter your coupon" required />
-                                    <button id="bonus"
-                                        class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Send
-                                        Now</button>
-                                </fieldset>
-                            </form>
-                        </div>
+            <!-- get bonush -->
+            <div id="bonus-section">
+                <h1 class="text-lg font-semibold mb-4 ml-2">Get Bonus</h1>
+                <div class="hero">
+                    <div class="card bg-white w-full max-w-sm shrink-0 shadow-sm rounded-3xl">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label font-medium text-black text-base mb-1 mt-3">Enter Bonus
+                                    Coupon</label>
+                                <input id="bonus-cuopon" type="text"
+                                    class="input border-none rounded-3xl bg-gray-200 font-light"
+                                    placeholder="Enter your coupon" required />
+                                <button id="bonus"
+                                    class="btn btn-neutral mt-4 text-xl font-semibold rounded-3xl bg-[#0874F2] border-none">Send
+                                    Now</button>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
+            </div>
+
+            <!-- transactions -->
+            <div id="transaction-section" class="flex flex-col gap-3">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-lg font-semibold">Transaction History</h1>
+                    <p class="text-gray-500">View All</p>
+                </div>
+            </div>
         </main>
     </section>
     <script src="script/add-money.js"></script>
